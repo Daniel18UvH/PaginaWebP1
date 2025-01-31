@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos Angular del parcial1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #9a9ae2;
+        }
+
+        header {
+            background-color: #8d3d3d;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #6d1212;
+            padding: 0.5rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        .presentation {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .presentation h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .presentation p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a los ejemplos de la clases Parcial 1</h1>
+    </header>
+
+    <nav>
+        <a href="https://ej1-fundamentos.vercel.app">Proyecto 1</a>
+        <a href="https://ejemplo2parcial1.vercel.app">DADOS</a>
+        <a href="https://ejemplo3-nine.vercel.app">Productos</a>
+        <a href="https://ejemplo4.vercel.app">Tareas</a>
+        <a href="https://ejemplo5.vercel.app">FormulariosR</a>
+        <a href="proyecto6.html">ActividadExtra</a>
+    </nav>
+
+    <div class="presentation">
+        <h1>¡Hola!👋 visitante de DS02SV-22, profesor o alumno</h1>
+        <p>Explora mis ejemplos de la clase en el parcial y descubre todo lo que hemods creado. Haz clic en el menú para navegar entre ellos.</p>
+    </div>
+
+    <footer>
+        <p>Desarrollado por Daniel-DS02SV-22 &copy; 2025</p>
+    </footer>
+
+    <script>
+        // Funcionalidad para mostrar un mensaje al hacer clic en un enlace del menú
+        const menuLinks = document.querySelectorAll('nav a');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                alert(`Redirigiendo a: ${link.textContent}`);
+            });
+        });
+
+        // Cambiar el color de fondo de la página al azar cuando se hace clic en el encabezado
+        const header = document.querySelector('header');
+
+        header.addEventListener('click', () => {
+            const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
